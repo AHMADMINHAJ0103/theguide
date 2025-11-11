@@ -31,7 +31,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              to="/articlepage"
+              to="/article"
               className="text-white hover:text-gray-300 text-sm sm:text-base lg:text-lg transition"
             >
               Articles
@@ -83,14 +83,14 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            to="/articlepage"
+            to="/article"
             onClick={handleLinkClick}
             className="text-white hover:text-gray-300 text-base py-2 transition"
           >
             Articles
           </Link>
           <Link
-            to="/poempage"
+            to="/poem"
             onClick={handleLinkClick}
             className="text-white hover:text-gray-300 text-base py-2 transition"
           >
