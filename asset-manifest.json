@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/theguide/static/css/main.caf123f7.css",
-    "main.js": "/theguide/static/js/main.c3fe5f84.js",
+    "main.css": "/theguide/static/css/main.e7f9acd1.css",
+    "main.js": "/theguide/static/js/main.22d2aa77.js",
     "index.html": "/theguide/index.html",
-    "main.caf123f7.css.map": "/theguide/static/css/main.caf123f7.css.map",
-    "main.c3fe5f84.js.map": "/theguide/static/js/main.c3fe5f84.js.map"
+    "main.e7f9acd1.css.map": "/theguide/static/css/main.e7f9acd1.css.map",
+    "main.22d2aa77.js.map": "/theguide/static/js/main.22d2aa77.js.map"
   },
   "entrypoints": [
-    "static/css/main.caf123f7.css",
-    "static/js/main.c3fe5f84.js"
+    "static/css/main.e7f9acd1.css",
+    "static/js/main.22d2aa77.js"
   ]
 }
