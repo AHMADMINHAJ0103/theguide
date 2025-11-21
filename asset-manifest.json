@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/theguide/static/css/main.df09f0e2.css",
-    "main.js": "/theguide/static/js/main.19c1bbbe.js",
+    "main.css": "/theguide/static/css/main.3317b9cc.css",
+    "main.js": "/theguide/static/js/main.352f384a.js",
     "static/media/last.png": "/theguide/static/media/last.445f2ff29f01bf019ffe.png",
     "index.html": "/theguide/index.html",
-    "main.df09f0e2.css.map": "/theguide/static/css/main.df09f0e2.css.map",
-    "main.19c1bbbe.js.map": "/theguide/static/js/main.19c1bbbe.js.map"
+    "main.3317b9cc.css.map": "/theguide/static/css/main.3317b9cc.css.map",
+    "main.352f384a.js.map": "/theguide/static/js/main.352f384a.js.map"
   },
   "entrypoints": [
-    "static/css/main.df09f0e2.css",
-    "static/js/main.19c1bbbe.js"
+    "static/css/main.3317b9cc.css",
+    "static/js/main.352f384a.js"
   ]
 }
