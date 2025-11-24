@@ -1,0 +1,74 @@
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+
+export default function Mixed() {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "articles"));
+
+        const list = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        setArticles(list);
+      } catch (error) {
+        console.error("Firestore fetch error:", error);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 p-6">
+      <h1 className="text-4xl font-bold text-white text-center mb-8 tracking-wide drop-shadow-lg">
+        Mixed Articles
+      </h1>
+
+      {articles.length === 0 ? (
+        <p className="text-center text-white text-lg">Loading...</p>
+      ) : (
+        <div className="max-w-4xl mx-auto space-y-6">
+          {articles.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white/90 backdrop-blur-md shadow-xl p-6 rounded-xl border border-white/20 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
+            >
+              {/* Title */}
+              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h2>
+
+              {/* Category + Author */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-gray-700 text-sm mb-3">
+                <p>
+                  <span className="font-bold">Category:</span> {item.category}
+                </p>
+                <p>
+                  <span className="font-bold">Author:</span> {item.author}
+                </p>
+              </div>
+
+              {/* Image */}
+              <img
+                src={item.image}
+                alt=""
+                className="w-full max-w-xs rounded-lg shadow-md mb-3"
+              />
+
+              {/* Short Content */}
+              <p className="text-gray-800 leading-relaxed">
+                {item.full.slice(0, 150)}...
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
